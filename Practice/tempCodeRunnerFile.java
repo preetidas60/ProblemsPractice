@@ -1,1 +1,1 @@
-Scanner input = new Scanner(System.in);
+num /= 10;
