@@ -3,9 +3,7 @@ public class pascal {
         int n = 1;
         int pos = 5;
         int result = n << pos;
-        
-        
-
+             
         System.out.println("Result: " + result);
     }
 }
