@@ -1,1 +1,1 @@
-arr[
+System.out.println(a);
