@@ -29,8 +29,9 @@ public class longConsecutive {
         for(int i=0; i<nums.length; i++){
             set.add(nums[i]);
         }
-        for(int i : set){
-            System.out.println(i);
+        
+        for(int i=0; i<set.size(); i++){
+            if(set.contains(set.g))
         }
     }
 }
