@@ -4,28 +4,23 @@ public class countMax {
         System.out.println(maximumCount(arr));
     }
     public static int maximumCount(int[] nums) {
-        int posCount = 0;
-        int negCount = 0;
-        int max = 0;
-        int start = 0;
-        int end = nums.length-1;
+        int n = nums.length;
+        int FirstPos = binarySearch(nums, 0, n-1, 1);
+        int posCount = n - FirstPos;
+        int FirstNeg = binarySearch(nums, 0, n-1, 0);
+        int negCount = FirstNeg;
+        return Math.max(posCount, negCount);
+    }
+    public static int binarySearch(int[] arr, int start, int end, int target){
         while(start<= end){
             int mid = start + (end - start)/2;
-            if(nums[mid] < 0){
-                negCount = mid+1;
+            if(arr[mid] < target){
                 start = mid+1;
-                max = Math.max(max, negCount);
             }
-            else if(nums[mid] == 0){
-                start = mid +1;
-                
-            }
-            else{
-                posCount = nums.length - mid;
-                end = mid-1;
-                max = Math.max(max, posCount);
+            else {
+                end = mid -1;
             }
         }
-        return max;
+        return start;
     }
 }
