@@ -37,8 +37,6 @@ public class mergeInPlace {
             k++;
         }
 
-        // it may be possible that one of the arrays is not complete
-        // copy the remaining elements
         while (i < m) {
             mix[k] = arr[i];
             i++;
